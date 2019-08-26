@@ -1,0 +1,36 @@
+<div class="col-sm-6">
+    <form (submit)="updatePet()">
+        <div class="form-group">
+            Name:
+            <input type="text" name="pet.name" [(ngModel)]="pet.name">&nbsp;
+            <span *ngIf="errors.name">{{ errors.name.message }}</span>
+        </div>
+        <div class="form-group">
+            Type:
+            <input type="text" name="pet.type" [(ngModel)]="pet.type">&nbsp;
+            <span *ngIf="errors.type">{{ errors.type.message }}</span>
+        </div>
+        <div class="form-group">
+            Description:
+            <input type="text" name="pet.description" [(ngModel)]="pet.description">&nbsp;
+            <span *ngIf="errors.description">{{ errors.description.message }}</span>
+        </div>
+        <div class="form-group">
+            Skills:
+        </div>
+        <div class="form-group">
+            &nbsp;&nbsp;&nbsp;Skill 1:
+            <input type="text" name="pet.skill1" [(ngModel)]="pet.skill1">
+        </div>
+        <div class="form-group">
+            &nbsp;&nbsp;&nbsp;Skill 2:
+            <input type="text" name="pet.skill2" [(ngModel)]="pet.skill2">
+        </div>
+        <div class="form-group">
+            &nbsp;&nbsp;&nbsp;Skill 3:
+            <input type="text" name="pet.skill3" [(ngModel)]="pet.skill3">
+        </div>
+        <button type="submit" class="btn btn-primary">Edit Pet</button>
+        <button [routerLink]="['/']" class="btn btn-warning">Cancel</button>
+    </form>
+</div>

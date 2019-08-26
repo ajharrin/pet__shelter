@@ -1,0 +1,27 @@
+<button type="button" class= "btn btn-link" (click) = "likeable()">Home</button>
+<h3>Details about {{ pet.name }}</h3>
+<div class="col-sm-6">
+    <table class="table">
+        <tr>
+            <th scope="row">Pet Type</th>
+            <td>{{ pet.type }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Description</th>
+            <td>{{ pet.description }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Skills</th>
+            <td>
+                {{ pet.skill1 }}<br>
+                {{ pet.skill2 }}<br>
+                {{ pet.skill3 }}<br>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Likes</th>
+            <td>{{pet.likes}}</td>
+        </tr>
+    </table>
+    <button type="button" class="btn btn-primary" (click) = "adoptPet()">Adopt Pet</button>
+    <button type="button" class="btn btn-success" (click)="like()" [disabled]="pet.isLikeable">Like</button>
